@@ -20,7 +20,14 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        
+        // 1) viewを取得する
+        val et:EditText = findViewById(R.id.et)
+        val btnStart:Button = findViewById(R.id.btnStart)
+
+        // 2) 画面遷移
+        btnStart.setOnClickListener {
+            val intent = Intent(this,SecondActivity::class.java)
+            startActivity(intent)
         }
 
     }
