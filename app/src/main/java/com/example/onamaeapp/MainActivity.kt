@@ -27,6 +27,10 @@ class MainActivity : AppCompatActivity() {
         // 2) 画面遷移
         btnStart.setOnClickListener {
             val intent = Intent(this,SecondActivity::class.java)
+
+            // 3) 値を渡す
+            intent.putExtra("MY_NAME",et.text.toString())
+
             startActivity(intent)
         }
 
